@@ -16,7 +16,7 @@ jobs:
         uses: 'azure/aci-deploy@v1'
         with:
           resource-group: acigroupv3
-          dns-name-label: appversion3
+          dns-name-label: version3app
           image: appversion3.azurecr.io/appversion3:${{ github.sha }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
