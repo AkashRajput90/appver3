@@ -1,0 +1,25 @@
+name: Deploy to Azure Container Instances
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  deploy-to-aci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log in to Azure
+        run: |
+          az login  --service-principal --tenant ${{ secrets.AZURE_TENANT_ID }} --username ${{ secrets.AZURE_CLIENT_ID }} --password ${{ secrets.AZURE_CLIENT_SECRET }}
+      - name: 'Deploy to Azure Container Instances'
+        uses: 'azure/aci-deploy@v1'
+        with:
+          resource-group: acigroupv3
+          dns-name-label: appversion3
+          image: appversion3.azurecr.io/aspcoresample:${{ github.sha }}
+          registry-username: ${{ secrets.REGISTRY_USERNAME }}
+          registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+          name: aciflaskv3
+          restart-policy: Never
+          location: 'Canada Central'
