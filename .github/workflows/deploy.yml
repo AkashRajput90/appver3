@@ -15,11 +15,11 @@ jobs:
       - name: 'Deploy to Azure Container Instances'
         uses: 'azure/aci-deploy@v1'
         with:
-          resource-group: aciv3
-          dns-name-label: version3app
-          image: appversion3.azurecr.io/appversion3:${{ github.sha }}
+          resource-group: acrgroupv4
+          dns-name-label: appversion4
+          image: acrflaskv4.azurecr.io/acrflaskv4:${{ github.sha }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          name: aciflaskv3
+          name: aciflaskv4
           restart-policy: Never
           location: 'Canada Central'
