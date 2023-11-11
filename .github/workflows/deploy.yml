@@ -20,6 +20,6 @@ jobs:
           image: acrflaskv4.azurecr.io/acrflaskv4:${{ github.sha }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          name: aciflaskv4
+          #name: aciflaskv4
           restart-policy: Never
           location: 'Canada Central'
