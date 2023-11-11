@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_NAME }}/appv3:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_NAME }}/appv4:${{ github.sha }}
           file: Dockerfile
 
       -
@@ -47,5 +47,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: appversion3.azurecr.io/appversion3:${{ github.sha }}
+          tags: acrflaskv4.azurecr.io/acrflaskv4:${{ github.sha }}
           file: Dockerfile
