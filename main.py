@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(__name__)
+
+from flask import Flask, render_template, redirect, request, url_for
+app = Flask(__name__, static_url_path='/static')
+
 
 tasks = [
     {'id': 1, 'title': 'Task 1', 'description': 'Description for Task 1'},

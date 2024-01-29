@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+  }
+  
+  /* Include the padding and border in an element's total width and height */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #4CAF50; /* Changed header color to green */
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /* Style the input */
+  .input-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-container input[type=text] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .input-container .addBtn {
+    padding: 10px;
+    width: 20%;
+    background: #45a049; /* Changed button color to a darker green */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .input-container .addBtn:hover {
+    background-color: #3f9142; /* Darker hover color */
+  }
+  
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #fff;
+    font-size: 18px;
+    transition: 0.2s;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #f9f9f9;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '\u2713';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
