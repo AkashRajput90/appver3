@@ -1,8 +1,6 @@
+from flask import Flask, render_template, redirect, request, url_for, flash
 
-
-from flask import Flask, render_template, redirect, request, url_for
 app = Flask(__name__, static_url_path='/static')
-
 
 tasks = [
     {'id': 1, 'title': 'Task 1', 'description': 'Description for Task 1'},
@@ -40,6 +38,8 @@ def edit_task(task_id):
         # Add your logic to update the task in the tasks list
         return redirect(url_for('index'))
     return render_template('edit_task.html', task=task_to_edit)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)

@@ -100,3 +100,51 @@ body {
     background-color: #f44336;
     color: white;
   }
+
+
+  /* Add this to your existing CSS file or create a new one */
+.login-signup {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.login-signup button {
+    margin-left: 10px;
+}
+
+
+/* Add this to your existing CSS file or create a new one */
+
+/* Top right corner alignment for Signup/Login buttons */
+.signup-login-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+/* Style for the task checkbox */
+.task-checkbox {
+  margin-right: 10px;
+}
+
+
+/* Add this to your existing CSS file or create a new one */
+
+.undo-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f8d7da; /* Red background color for undo */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.undo-container button {
+  background: none;
+  border: none;
+  color: #721c24; /* Dark red text color for undo */
+  cursor: pointer;
+}

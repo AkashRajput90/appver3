@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/static/css/styles.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-  <script src="/static/js/script.js"></script>
+    <script src="/static/js/script.js"></script>
+    <div class="header">
+        <h1>My To-Do List</h1>
+        <!-- Container for Signup/Login buttons -->
+        <div class="signup-login-container">
+            <button id="signupButton" onclick="location.href='/signup'">Signup</button>
+            <button id="loginButton" onclick="location.href='/login'">Login</button>
+        </div>
+        <div class="input-container">
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+    </div>
 
-<div class="header">
-  <h1>My To-Do List</h1>
-  <div class="input-container">
-    <input type="text" id="myInput" placeholder="Title...">
-    <span onclick="newElement()" class="addBtn">Add</span>
-  </div>
-</div>
-
-<ul id="myUL">
-
-</ul>
+    <ul id="myUL">
+    </ul>
 </body>
 </html>
